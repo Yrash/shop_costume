@@ -1,0 +1,56 @@
+@mixin col ($col, $padding, $boxcol)
+  $whi: (((100% - ( $padding * ($col - 1) ))/$col)*$boxcol) + ($padding*($boxcol - 1))
+  $margin: ( 100 - ($whi * ($col / $boxcol)))/($col / $boxcol)
+  width: $whi  
+  position: relative
+  
+
+@mixin flexC ( $just, $align)
+  display: flex
+  justify-content: $just
+  align-items:  $align
+
+= colN ($col,$boxcol)
+  width: (100%/$col) * $boxcol
+  box-sizing: border-box
+  float: left
+
+@function rem($n) 
+  @return ($n/16)*1rem
+
+@function p($n , $x) 
+  @return (100% * $n)/$x
+
+
+
+@mixin h_m($max, $min,$Bmax , $Bmin)
+  margin-top: (100% * $min)/$max
+  margin-bottom: (100% * $Bmin)/$Bmax
+
+@mixin clearfix
+  &::after
+   content: ""
+   clear: both
+   display: table
+
+@mixin font ($size, $font, $tran, $color)
+  font-size: $size
+  font-family: $font
+  text-transform: $tran
+  color: $color
+@mixin m_query($media)
+    @media screen and #{$media}
+        @content
+
+
+@mixin sect($psec,$pbod)
+  width: (100% * $psec)/$pbod
+
+
+@mixin button
+  transition: all 0.4s ease-in-out
+  transform: scale(1)
+  box-shadow: 0 0 10px 0.5px rgba(0,0,0,0.5)
+  &:hover
+    transform: scale(1.08)
+    box-shadow: 0 0 10px 0.5px $color_tem

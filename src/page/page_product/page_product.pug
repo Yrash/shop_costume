@@ -1,0 +1,101 @@
+include ../../pug/mixin.pug
+.content
+	.content__link_nav(class="link_nav")
+		.container
+			.link_nav__link
+				a(href="#") Главная
+				div
+				a(href="#") Продукт 
+			.link_nav__Name
+				p.
+					Продукты
+	.container
+		.content__center
+			.content_center
+				.content_center__img
+					img(src="./src/img/product/Untitled-3-796x1024.jpg", alt="Product")
+					.content_center__quantity
+						form
+							label(for="quantity") Количество товара
+							input( id="quantity" name="quantity" type="number" value=" 1"  placeholder=' Введите количество товара ' )
+						div
+							span Описание:
+
+							p   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam repudiandae facilis, tempora, unde aliquam iste perferendis ex voluptatum quos quia nemo culpa atque dolorem ea nisi earum magni 
+							p  lorem
+						p Оренда 
+							strong.
+								120 
+							p грн
+				.content_center__title
+					h2.
+						Снегурочка 
+					div 
+						div
+							strong 599 
+							span usd
+						button В корзину
+				.content_center__coment(class='coments')
+					.coments__write
+						form
+							.coments__write-left
+								input(type="text" name='name' placeholder=' Введите имя')
+								input(type="email" placeholder=' Введите емейл')
+								button 
+									span Отправить 
+							.coments__write-right
+								textarea( placeholder=' Введите текст' name="", cols="30", rows="10")
+					.coments__items
+						.coments__item
+							.coments__item-left
+								.coments__item-say
+									strong John Doe
+									span say 
+									p Not bad
+								.coments__item-description
+									p.
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe cumque suscipit, temporibus!
+							.coments__item-right
+								p.text-h2 01
+						.coments__item
+							.coments__item-left
+								.coments__item-say
+									strong John Doe
+									span say 
+									p Not bad
+								.coments__item-description
+									p.
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe cumque suscipit, temporibus!
+							.coments__item-right
+								p.text-h2 01
+						.coments__item
+							.coments__item-left
+								.coments__item-say
+									strong John Doe
+									span say 
+									p Not bad
+								.coments__item-description
+									p.
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe cumque suscipit, temporibus!
+							.coments__item-right
+								p.text-h2 01
+		aside.content__sitebar()
+			.footer__best_seller
+				.footer__b_title
+					span.h2 Best seller
+						strong .
+				.footer__b_description
+					+best_sell(best_sell)
+
+			.footer__Just_added
+				.footer__J_title
+					span.h2 Just added
+						strong .
+				.footer__J_description
+					+best_sell(best_sell)
+		.content__bottom
+			h2 You migh also like
+				strong .
+			.content__items
+				+items("content__item", best_sell)
+

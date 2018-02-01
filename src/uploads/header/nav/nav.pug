@@ -1,0 +1,22 @@
+
+.header__nav
+	.container
+		.header_nav
+			.header_nav__min(id='nav_min')
+				div
+				div
+				div
+
+			nav#nav
+				+list_nav("",nav)
+			.header_nav__serch
+				.header_nav__cart
+					img(src="./src/header/header_nav__cart.png", alt="cart")
+					span  Cart
+					strong 3
+					span items 
+					p 47.99$
+				.header_nav__input
+					input(type="text" placeholder=" Serch")
+					img(src="./src/header/header_nav__input.png", alt="serch")
+					

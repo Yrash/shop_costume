@@ -1,0 +1,31 @@
+include ../../pug/mixin.pug
+.content
+	.contant__link_nav(class="ink_nav")
+
+	.container
+
+		.content_best__link(class="content_best")
+			.content_best__title
+				h2 
+					.content_best__item
+						a(href="#") Hot products
+							strong .
+						.content_best__active
+					.content_best__item
+						a(href="#") Latest products
+							strong .
+						.content_best__active
+					.content_best__item
+						a(href="#") Best seller
+							strong .
+						.content_best__active
+				.content_best__items
+
+		.content__items
+			+items("content__item", items)
+		.content__informations(class='informations')
+			h2 Userful informations
+				strong .
+			.content__line
+			.informations__items
+				+items_informations('informations__item',information)

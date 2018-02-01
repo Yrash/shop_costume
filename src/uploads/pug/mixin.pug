@@ -1,0 +1,64 @@
+include var.pug
+
+mixin list(id, items)
+	ul(class=id) 
+		each val in items
+			li
+				img(src=val.src)
+				a(href=val.href)= val.name
+
+
+mixin list_nav(id, items)
+	ul(class=id) 
+		each val in items
+			li
+				a(href=val.href)= val.name
+
+mixin items_informations(id, items)
+	each val in items
+		div(class=id)
+			div
+				img(src=val.src, alt=val.name)
+			div
+				p(class="h2")= val.name
+				span()= val.description
+				br
+				a(href=val.href) more-
+
+
+mixin sotceti(items)
+	each val in items
+		a(href="#")
+			img(src=val.src, alt=val.name)
+
+
+mixin items(id, items)
+	each val in items
+		.item(class=id)
+			.item__top
+				a(href=val.href)
+				img(src=val.min_userfile, alt=val.name)
+				p( )= val.name
+			.item__botton
+				.item__text1
+					strong()= val.mony
+					br
+					span USD
+				.item__text2
+					button В корзину
+
+
+mixin best_sell(items)
+	each val in items
+		.footer_item
+			.footer_item__left
+				img(src=val.min_userfile,  alt=val.name)
+				div 
+					p(class="text-h3")= val.name
+					span()= val.description					
+			.footer_item__right
+				strong()= val.mony
+				span USD
+			a(href=val.href)
+
+

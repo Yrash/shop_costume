@@ -1,0 +1,515 @@
+.content
+	&:before
+		content: ''
+		display: table
+		clear: both
+	&__link_nav
+		background-color: $color_tem
+		height: rem(60)
+	&__center
+		
+		float: left
+		margin-top: rem(67)
+		
+		@include m_query($xs)
+			+colN(12,12)
+			padding-right: rem(0)
+		@include m_query($sm)
+			+colN(12,12)
+			padding-right: rem(0)
+		@include m_query($md)
+			+colN(12,8)
+			padding-right: rem(30)
+		@include m_query($lg)
+			+colN(12,8)
+			padding-right: rem(30)
+	&__sitebar		
+		float: right
+		margin-top: rem(67)
+		
+		@include m_query($xs)
+			+colN(12,12)
+			padding-right: rem(0)
+		@include m_query($sm)
+			+colN(12,12)
+			padding-right: rem(0)
+		@include m_query($md)
+			+colN(12,4)
+			padding-right: rem(30)
+		@include m_query($lg)
+			+colN(12,4)
+			padding-right: rem(30)
+	&__bottom
+		+colN(12,12)
+		margin-top: rem(52)
+		h2
+			font-family: MuseoSlab
+			font-size: rem(32)
+			font-weight: 500
+			letter-spacing: -1.6px
+			text-align: left
+			color: #414141
+			margin-bottom: rem(33)
+			strong
+				color: $color_tem
+		.content__items
+			border-top: 4px solid #d4d4d4
+
+
+.content__sitebar
+	.footer__Just_added
+		margin-top: rem(30)
+	.footer__b_title
+		span
+			color: #454545
+			strong
+				color: $color_tem
+	.footer_item:first-child
+		border-top: .25em solid #dddddd
+	.footer_item
+		border-top: .0625em solid #cdcdcd
+	.footer_item__right
+		border-left: 1px solid #cdcdcd
+	.footer__J_title
+		span
+			color: #454545
+			strong
+				color: $color_tem
+
+.content_center
+	position: relative
+	z-index: 10
+	&:after
+		content: ""
+		position: absolute
+		top: 39px
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: #fff
+		border-radius: rem(10)
+		z-index: -20
+		border: solid 1px #e7e7e7
+		box-sizing: border-box
+		transform: scale(0.96)
+	&:before
+		content: ""
+		position: absolute
+		top: 20px
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: #fff
+		border-radius: rem(10)
+		z-index: -1
+		border: solid 1px #e7e7e7
+		box-sizing: border-box
+		transform: scale(0.98)
+	
+	&__img
+		padding-top: rem(32)
+		padding-bottom: rem(29)
+		background-color: #ffffff
+		border-right: solid 1px #e7e7e7
+		border-left: solid 1px #e7e7e7
+		border-top: solid 1px #e7e7e7
+		border-radius: rem(10) rem(10) 0px 0px
+		overflow: hidden
+		+clearfix
+		img 
+			@include m_query($xs)
+				+colN(12,12)
+			@include m_query($sm)
+				+colN(12,12)
+			@include m_query($md)
+				width: p(389,698)
+			@include m_query($lg)
+				width: p(389,698)
+			
+			box-sizing: border-box
+			float: left
+			border-right: 1px solid #e3e3e3		
+	&__quantity
+	
+		@include m_query($xs)
+			+colN(12,12)
+		@include m_query($sm)
+			+colN(12,12)
+		@include m_query($md)
+			width: p(308,698)
+		@include m_query($lg)
+			width: p(308,698)
+		box-sizing: border-box
+		float: left
+		padding: 0 rem(34)
+		label , > p
+			font-family: Raleway
+			font-size: rem(16)
+			font-weight: bold
+			line-height: rem(25)
+			letter-spacing: -0.4px
+			text-align: left
+			color: #2e2e2e
+		strong
+			font-family: MuseoSlab
+			font-size: rem(50)
+			font-weight: 500
+			line-height: rem(26)
+			letter-spacing: -2.5px
+			text-align: left
+			color: #db5d5f
+			vertical-align: bottom
+		p 
+			display: inline
+		input
+			padding-left: rem(15)
+			background-color: #fff
+			border: solid 1px #eeeeee
+			width: 100%
+			box-sizing: border-box
+			height: rem(42)
+			font-family: MuseoSlab
+			font-size: rem(12)
+			font-weight: 500
+			line-height: rem(14)
+			letter-spacing: -0.3px
+			color: #696969
+			margin-bottom: rem(15)
+			&:focus
+				outline-color: $color_tem
+		div
+			margin-bottom: rem(10)
+			span
+				font-family: Raleway
+				font-size: rem(16)
+				font-weight: bold
+				line-height: rem(25)
+				letter-spacing: -0.4px
+				text-align: left
+				color: #2e2e2e
+				display: block
+			
+			p
+				font-family: Raleway
+				font-size: rem(13)
+				line-height: rem(17)
+				letter-spacing: -0.7px
+				text-align: justify
+				color: #808080
+				margin-top: rem(10) 
+				display:  inline-block
+				width: 100%
+				box-sizing: border-box
+
+	&__title
+		border-right: solid 1px #e7e7e7
+		border-left: solid 1px #e7e7e7
+		background-color: #fff
+		padding: 0 rem(28) 
+		
+
+		h2 
+			font-family: MuseoSlab
+			font-size: rem(32)
+			font-weight: 500
+			line-height: rem(45)
+			letter-spacing: -1.6px
+			text-align: left
+			color: #454545
+			border-top: solid 1px #e7e7e7
+			border-bottom: solid 1px #e7e7e7
+			padding: rem(29) 0
+		&>div
+			border-top: solid 1px #e7e7e7
+			border-bottom: solid 1px #e7e7e7
+			padding: rem(29) 0
+			width: 100%
+			strong				
+				font-family: MuseoSlab
+				font-size: rem(50)
+				font-weight: 500
+				line-height: rem(26)
+				letter-spacing: -2.5px
+				text-align: left
+				color: #db5d5f
+				vertical-align: bottom
+			span
+				font-family: Raleway
+				font-size: rem(14)
+				line-height: rem(26)
+				letter-spacing: -0.7px
+				text-align: left
+				color: #999999
+			div
+				width: p(321,(698-29))
+				display: inline-block
+				border-right: solid 1px #e3e3e3
+				text-align: center
+			button
+				width: p(241,(698-29))
+				height: rem(72)
+				border-radius: 10px
+				background-color: #f06060
+				border: none
+				font-family: MuseoSlab
+				@include m_query($xs)
+					font-size: rem(16)
+				@include m_query($sm)
+					font-size: rem(16)
+				@include m_query($md)
+					font-size: rem(16)
+				@include m_query($lg)
+					font-size: rem(32)
+				font-weight: 500
+				text-align: center
+				color: #ffffff
+				margin-left: 9%			
+				+button
+				&:focus
+					outline: none
+
+	&__coment
+		border-right: solid 1px #e7e7e7
+		border-left: solid 1px #e7e7e7
+		border-bottom: solid 1px #e7e7e7
+		background-color: #fff
+		padding: 0 rem(28)
+		border-radius: 0px 0px rem(10) rem(10) 
+
+.link_nav
+	&__Name
+		+colN(12,6)
+		line-height: rem(60)
+		position: relative
+		p 
+			position: absolute
+			right: 0
+			font-family: MuseoSlab
+			font-size: rem(18)
+			font-weight: 500
+			letter-spacing: -0.9px
+			text-align: right
+			color: #ffffff
+	&__link
+		line-height: rem(60)
+		+colN(12,6)
+		div
+			width: rem(18)
+			height: rem(17)
+			background-image: url(./header/plus.png)
+			background-repeat: no-repeat
+			background-size: cover
+			display: inline-block
+			margin: 0 rem(10)
+		a 
+			text-decoration: none
+			font-family: MuseoSlab
+			font-size: rem(18)
+			font-weight: 500
+			letter-spacing: -0.9px
+			text-align: left
+			color: #ffffff
+			&:hover
+				cursor: pointer
+				text-decoration: none
+.coments
+	&__item:last-child
+		border-bottom: none
+
+	&__item
+		+clearfix
+		padding-top: rem(20)
+		padding-bottom: rem(29)
+		border-bottom: 1px solid #e3e3e3
+	&__write
+
+		border-bottom: 1px solid #e3e3e3
+		padding: rem(31) 0
+		input
+			padding-left: rem(10)
+			width: 100%
+			height: rem(42)
+			background-color: #ffffff
+			border: solid 1px #eeeeee
+			margin-bottom: rem(15)
+			box-sizing: border-box
+			&:focus
+				outline-color: $color_tem
+		button
+			@include m_query($xs)
+				margin: 1.5rem auto 2rem auto
+			@include m_query($sm)
+				margin: 1.5rem auto 2rem auto
+			@include m_query($md)
+				margin: 0 auto
+			@include m_query($lg)
+				margin: 0 auto
+			
+			width: rem(128)
+			height: rem(53)
+			background-color: #f06060
+			border-radius: 9.9px
+			border: none
+			+button
+			&:focus
+				outline: none
+			span
+				font-family: MuseoSlab
+				font-size: 1.4rem
+				font-weight: 500
+				text-align: center
+				color: #ffffff
+		textarea
+			width: 98%
+			box-sizing: border-box
+			margin-left: 2%
+			height: rem(156)
+			border-radius: 2px
+			background-color: #ffffff
+			border: solid 1px #eeeeee	
+			padding: rem(10) rem(10)		
+			&:focus
+				outline-color: $color_tem
+
+		+clearfix
+		&-left
+			text-align: center		
+			@include m_query($xs)
+				+colN(12,12)
+			@include m_query($sm)
+				+colN(12,12)
+			@include m_query($md)
+				+colN(12,4)
+			@include m_query($lg)
+				+colN(12,4)
+
+		&-right
+				
+			@include m_query($xs)
+				+colN(12,12)
+			@include m_query($sm)
+				+colN(12,12)
+			@include m_query($md)
+				+colN(12,8)
+			@include m_query($lg)
+				+colN(12,8)
+	&__item-say
+		strong
+			font-family: MuseoSlab
+			font-size: rem(16)
+			font-weight: 500
+			line-height: rem(26)
+			letter-spacing: -0.8px
+			color: #db5d5f
+		p
+			font-family: MuseoSlab
+			font-size: rem(16)
+			font-weight: 500
+			line-height: rem(2)
+			letter-spacing: -0.8px
+			text-align: left
+			color: #3c3c3c
+			display: inline
+		span
+			margin-left: rem(10)
+			margin-right: rem(17)
+			font-family: MuseoSlab
+			font-size: rem(12)
+			font-weight: 500
+			line-height: rem(44)
+			letter-spacing: -0.3px
+			text-align: left
+			color: #696969
+	&__item-description
+		font-family: Raleway
+		font-size: rem(13)
+		line-height: rem(21)
+		letter-spacing: -0.7px
+		text-align: left
+		color: #808080
+	&__item-left		
+		@include m_query($xs)
+			+colN(12,12)
+			margin-bottom: rem(10)
+			padding-bottom: rem(16)
+			border-bottom: solid 1px #e3e3e3
+			border-right: none
+
+		@include m_query($sm)
+			+colN(12,12)
+			margin-bottom: rem(10)
+			padding-bottom: rem(16)
+			border-bottom: solid 1px #e3e3e3
+			border-right: none
+
+		@include m_query($md)
+			+colN(12,10)
+			margin-bottom: rem(0)
+			padding-bottom: rem(0)
+			border-right: solid 1px #e3e3e3
+			border-bottom: none
+
+		@include m_query($lg)
+			+colN(12,10)
+			margin-bottom: rem(0)
+			padding-bottom: rem(0)
+			border-right: solid 1px #e3e3e3
+			border-bottom: none
+
+		
+	&__item-right
+		width: 100%
+		@include m_query($xs)
+			+colN(12,12)
+		@include m_query($sm)
+			+colN(12,12)
+		@include m_query($md)
+			+colN(12,2)
+		@include m_query($lg)
+			+colN(12,2)
+		position: relative	
+		p
+			text-align: center
+			@include m_query($xs)
+				position: relative
+				top: 0
+				left: 0
+			@include m_query($sm)
+				position: relative
+				top: 0
+				left: 0
+			@include m_query($md)
+				position: absolute
+				top: 1rem
+				left: 2rem
+			@include m_query($lg)
+				position: absolute
+				top: 1rem
+				left: 2rem
+
+			font-family: MuseoSlab
+			font-size: rem(50)
+			font-weight: 500
+			letter-spacing: -2.5px
+			color: #e2e2e2
+
+
+
+
+p::selection
+	background: $color_tem
+	color: white
+
+
+
+.lem
+	margin-left: 200px
+	width: 500px
+	height: 500px
+	overflow: hidden
+	div
+		width: 500px
+		height: 500px
+		transform: rotate(45deg)
+		background-color: pink
+		border: solid 4px #000

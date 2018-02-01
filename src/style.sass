@@ -1,0 +1,52 @@
+@import "_var.sass"
+@import "_mixin.sass"
+
+
+@import "./header/top_bar/top_bar.sass"
+@import "./header/logo/logo.sass"
+@import "slider/slider.sass"
+@import "./header/nav/nav.sass"
+@import "./footer/footer.sass"
+
+@import "./page/page_index/content.sass"
+@import "./page/page_product/page_product.sass"
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&subset=cyrillic,cyrillic-ext')
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,600,700,800')
+
+.container
+  overflow: hidden
+  @include m_query($xs)
+    @include sect(288,320)
+  @include m_query($sm)
+    @include sect(675,750)
+  @include m_query($md)
+    @include sect(1083,1349)
+  @include m_query($lg)
+    @include sect(1083,1349)
+  margin: auto
+  +clearfix
+  max-width: 1083px
+
+body
+  @include m_query($xs)
+    font-size: 0.7em
+  @include m_query($sm)
+    font-size: 0.8em
+  @include m_query($md)
+    font-size: 1em
+  @include m_query($lg)
+    font-size: 1em
+
+html
+  font-size: 16px
+
+.wrap 
+  overflow-x: hidden
+
+* 
+  margin: 0
+  padding: 0
+

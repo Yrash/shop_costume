@@ -1,0 +1,38 @@
+@mixin col ($col, $padding, $boxcol)
+  $whi: (((100% - ( $padding * ($col - 1) ))/$col)*$boxcol) + ($padding*($boxcol - 1))
+  $margin: ( 100 - ($whi * ($col / $boxcol)))/($col / $boxcol)
+  width: $whi  
+  position: relative
+  
+
+@mixin flexC ( $just, $align)
+  display: flex
+  justify-content: $just
+  align-items:  $align
+
+
+
+
+
+@mixin h_m($max, $min,$Bmax , $Bmin)
+  margin-top: (100% * $min)/$max
+  margin-bottom: (100% * $Bmin)/$Bmax
+
+@mixin clerfix
+  &::after
+   content: ""
+   clear: both
+   display: table
+
+@mixin font ($size, $font, $tran, $color)
+  font-size: $size
+  font-family: $font
+  text-transform: $tran
+  color: $color
+@mixin m_query($media)
+    @media screen and #{$media}
+        @content
+
+
+@mixin sect($psec,$pbod)
+  width: (100% * $psec)/$pbod

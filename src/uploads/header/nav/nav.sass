@@ -1,0 +1,225 @@
+.header__nav	
+	@include m_query($xs)
+		height: auto	
+	@include m_query($sm)
+		height: auto
+	@include m_query($md)
+		height: (62em/16)
+	@include m_query($lg)
+		height: (62em/16)
+	border-top: 1px solid $color_border
+	box-shadow: 0px 2px 4px  $color_border
+.header_nav
+	display: flex
+	align-items: flex-start
+	justify-content: space-between	
+	transition: all 1s ease-in-out
+	@include m_query($xs)
+		flex-wrap: wrap
+	@include m_query($sm)
+		flex-wrap: wrap
+	@include m_query($sm)
+		flex-wrap: nowrap
+	@include m_query($sm)
+		flex-wrap: nowrap
+	nav
+		@include m_query($xs)
+			order: 3
+			width: 100%
+			height: 0px
+		@include m_query($sm)
+			order: -1
+			width: auto
+			height: auto
+		@include m_query($sm)
+			order: -1
+			width: auto
+			height: auto
+		@include m_query($sm)
+			order: -1
+			width: auto
+			height: auto
+		position: relative
+		ul
+			list-style: none			
+			@include m_query($xs)				
+				display: flex
+				flex-wrap: wrap
+				li
+					width: 33.3%
+					text-align: center
+					border: 1px solid #b63b3b
+					box-sizing: border-box
+					background-color: #f06060
+					margin: auto
+					box-shadow: 2.5px 4.3px 5px 0 rgba(202,202,202,0.75)
+					a 
+						color: white
+						font-weight: 500
+				
+			@include m_query($sm)
+				display: flex
+				li 
+					width: auto
+					text-align: auto
+					border: none
+					box-sizing: border-box
+					background-color: white
+					margin: auto
+					box-shadow: none
+					a
+						color: $color_menu
+			@include m_query($md)
+				flex-wrap: nowrap
+				display: flex
+				li 
+					width: auto
+					text-align: auto
+					border: none
+					box-sizing: border-box
+					background-color: white
+					margin: auto
+					box-shadow: none
+					a
+						color: $color_menu
+			@include m_query($lg)
+				flex-wrap: nowrap
+				display: flex
+				li 
+					width: auto	
+					text-align: auto
+					border: none
+					box-sizing: border-box
+					background-color: white
+					margin: auto
+					color: none
+					box-shadow: none
+					a
+						color: $color_menu
+			a
+				font-size: 1em
+				font-weight: 600
+				font-family: $font
+				text-decoration: none
+				color: $color_menu
+				margin-right: (30em/16)
+				line-height: (62em/16)
+				transition: all 0.3s ease-in-out
+
+				&:hover
+					text-decoration: none
+					color: $color_tem
+	&__serch
+		display: flex
+		margin: auto 0
+		flex-wrap: wrap
+	&__cart
+		@include m_query($xs)
+			@include col(12,2,12)
+		@include m_query($sm)
+			@include col(12,2,12)
+		@include m_query($md)
+			@include col(12,2,6.5)
+		@include m_query($lg)
+			@include col(12,2,6.5)
+		font-family: $font
+		display: flex
+		align-items: center
+		line-height: (35em/16)
+		height: (35em/16)
+		background-color: #fff
+		border: 1px solid #e0e0e0
+		border-radius: 2px
+		span
+			color: #999999
+			font-size: (12em/16)
+		strong
+			margin: 0 (4em/16)
+			color: $color_tem
+		img 
+			margin-left: (10em/16)
+			margin-right: (7em/16)
+		p 
+			margin-left: (20em/16)
+			color: #393939
+			font-size: 1em
+			font-weight: 500
+			letter-spacing: 0.5px
+			font-family: $font
+	&__input
+		@include m_query($xs)
+			@include col(12,2,12)
+			margin-left: 0
+		@include m_query($sm)
+			margin-left: 0
+			@include col(12,2,12)	
+		@include m_query($md)
+			margin-left: (10em/16)
+			@include col(12,2,5)
+			margin-left: (10em/16)	
+		@include m_query($lg)
+			@include col(12,2,5)
+			margin-left: (10em/16)			 
+		overflow: hidden	
+		position: relative	
+		
+		height: (35em/16)
+		font-family: $font
+		border-radius: 2px
+		background-color: #fff
+		border: 1px solid #e0e0e0
+		input 
+			margin-left: 0.8em	
+			border: none
+			height: 100%	
+			&:focus
+				outline: none
+		img
+			position: absolute	
+			top: 25%
+			right: 0.8em
+.header_nav__min
+	position: relative
+	@include m_query($xs)
+		display: block		
+	@include m_query($sm)
+		display: none
+	@include m_query($md)
+		display: none
+	@include m_query($lg)
+		display: none
+	&:hover
+		div
+			position: absolute
+			top: 24%
+			left: 10%
+		div:nth-child(1)
+			transform: rotate(45deg)
+		div:nth-child(3)
+			transform: rotate(-45deg)				
+		div:nth-child(2)
+			display: none
+
+	display: flex
+	justify-content: space-between
+	align-items: center
+	flex-direction: column
+	width: (62em/16)*0.7
+	height: (62em/16)*0.7
+	background-color: #fff
+	box-shadow: 0 0 20px 0.5px $color_tem
+	border-radius: 5px
+	margin-top: 5px
+	margin-left: 10px
+	margin-bottom: 6px
+	margin: auto
+	div 
+		transition: all 0.5s ease-in-out
+		background-color: $color_tem
+		width: 80%
+		height: 3px
+		margin: 5.5px auto
+		border-radius: 2px
+
+
+

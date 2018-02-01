@@ -1,0 +1,94 @@
+.header_logo
+	margin-top: 2.250em
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	margin-bottom: 1.438em
+	&__logo
+		display: flex		
+		@include m_query($xs)
+			justify-content: center
+			margin: (10em/16) auto
+		@include m_query($sm)
+			justify-content: center
+			margin: auto
+		@include m_query($md)
+			justify-content: center
+			margin: 0
+		@include m_query($lg)
+			justify-content: center
+			margin: 0
+
+		span
+			margin: auto
+			color: $color_description
+			font-size: 2.5em
+		strong			
+			margin: auto
+			color: $color_tem
+			font-size: 2.5em
+
+		div
+			margin: auto
+			margin-right: (10em/16)
+			width: (59em/16)
+			height: (59em/16)
+			background-color: $color_tem
+			border-radius: 100%
+			display: flex			
+			p
+				text-align: center
+				line-height: 0.75em
+				font-family: $font
+				font-size: 3.75em
+				color: white
+				margin: auto
+.header_lofo__phone
+	display: flex
+	flex-wrap: wrap
+	justify-content: center
+	@include m_query($xs)
+		justify-content: space-around
+		width: 100%
+		font-size: 1.6em
+		div
+			margin: (5em/16)
+			justify-content: space-around
+			width: 100%	
+	@include m_query($sm)
+		justify-content: space-around
+		width: 100%
+		font-size: 1.6em
+		div
+			margin: auto
+			justify-content: space-around
+			width: auto	
+	@include m_query($md)
+		justify-content: center
+		width: auto	
+		font-size: 1em	
+		div
+			margin: auto
+			justify-content: space-around
+			width: auto
+	@include m_query($lg)
+		justify-content: center
+		width: auto
+		font-size: 1em
+		div
+			margin: auto
+			justify-content: space-around
+			width: auto	
+	div
+		display: flex
+		align-items: center
+		span
+			font-size: 0.813em
+			color: $color_description
+		div			
+			text-align: justify
+			border-left: 1px solid $color_border
+			width: 162px
+			display: flex
+			flex-direction: column
+			margin-left: 1.25em

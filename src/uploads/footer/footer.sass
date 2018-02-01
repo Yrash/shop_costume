@@ -1,0 +1,253 @@
+// footer 
+
+.footer_content
+	margin-top: (66em/16)+((130em/16)/2)
+	display: flex
+	justify-content: space-between
+	align-items: baseline
+	flex-wrap: wrap
+
+.footer
+	padding-bottom: (56em/16)
+	background-color: #2f2f2f
+	&__shopmint
+		@include m_query($xs)
+			@include col(12,2,12)
+		@include m_query($sm)
+			@include col(12,2,12)
+		@include m_query($md)
+			@include col(12,2,4)
+		@include m_query($lg)
+			@include col(12,2,4)
+
+	&__best_seller
+		@include m_query($xs)
+			@include col(12,2,12)
+		@include m_query($sm)
+			@include col(12,2,6)
+		@include m_query($md)
+			@include col(12,2,4)
+		@include m_query($lg)
+			@include col(12,2,4)
+
+	&__Just_added		
+		@include m_query($xs)
+			@include col(12,2,12)
+		@include m_query($sm)
+			@include col(12,2,6)
+		@include m_query($md)
+			@include col(12,2,4)
+		@include m_query($lg)
+			@include col(12,2,4)
+
+	&__b_title
+		display: flex
+		margin-bottom: (33em/16)
+		align-items: center
+		span
+			color: white
+			font-size: (32em/16)
+	&__J_title
+		display: flex
+		margin-bottom: (33em/16)
+		align-items: center
+		span
+			color: white
+			font-size: (32em/16)
+.footer_item:first-child
+	border-top: (4em/16) solid #3b3b3b
+.footer_item
+	@include m_query($xs)
+		font-size: 1.5em
+	@include m_query($sm)
+		font-size: 1.2em
+	@include m_query($md)
+		font-size: 1em
+	@include m_query($lg)
+		font-size: 1em
+	position: relative
+	border-top: (1em/16)solid #3b3b3b
+	display: flex 
+	justify-content: space-between
+	align-items: center
+	a 	
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		cursor: pointer
+	&__left
+		width: 75%
+		display: flex
+		align-items: center
+		justify-content: space-between
+		div 	
+			margin: 0 auto
+		img
+			width: 20%			
+			padding: (10em/16)
+			border-radius: (15em/16)
+		p 
+			color: white
+			font-size: (15em/16)
+			font-family: $font
+		span 	
+			color: #808080
+			font-size: (13em/16)
+			font-family: $font
+	&__right
+		width: 25%
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-direction: column
+		border-left: 1px solid #3d3d3d
+		strong
+			color: $color_tem
+			font-size: (32em/16)
+			font-weight: 500
+			font-family: $font
+		span 
+			font-size: (14em/16)
+			color: #999999
+			font-family: $font
+.shopmint	
+	@include m_query($xs)
+		font-size: 1.5em
+	@include m_query($sm)
+		font-size: 1.2em
+	@include m_query($md)
+		font-size: 1em
+	@include m_query($lg)
+		font-size: 1em
+	span 
+		font-size: (16em/16)
+		color: #3f3f3f
+		font-family: $font
+	strong
+		font-size: (16em/16)
+		color: #999999
+		font-family: $font
+	&__title
+		display: flex
+		margin-bottom: (33em/16)
+		align-items: center
+		div 
+			width: (56em/16)
+			height: (56em/16)
+			background-color: #f06060
+			border-radius: 100%
+			line-height: (56em/16)
+			text-align: center
+			p 
+				font-size: (55em/16)
+				color: white			
+		span 
+			margin-left: (10em/16)	
+			color: white
+			font-size: (32em/16)
+	&__contact
+		border-top: (4em/16) solid #3b3b3b
+		p 	
+			font-size: (16em/16)
+			color: #fff
+			margin: (31em/16) 0
+			font-family: $font
+	&__c_time
+		margin-top: (19em/16)
+	&__c_email
+		margin-top: (19em/16)
+	&__social
+		margin-top: (24em/16)
+		display: flex
+		a
+			display: block 
+			margin-right: (12em/16)
+			width: 24px
+			height: 24px
+			img 
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// input serch
+
+.content__big-input
+	position: absolute
+	top: auto
+	margin-top: -(60em/16)
+	z-index: 10
+	width: 80%
+	left: 10%
+	form
+		height: (130em/16)
+		border-radius: (10em/16)
+		background-color: #ffffff
+		border: solid 1px #e7e7e7
+		display: flex
+	input:nth-child(1)
+		margin: auto
+		width: 60%
+		height: (51em/16)
+		background-color: #ffffff
+		border: solid 1px #efefef
+		padding-left: (15em/16)
+		&:focus 
+			outline-color: $color_tem
+	input:nth-child(2)
+		margin: auto		
+		width: 20%
+		height: (56em/16)
+		border-radius: 10px
+		background-color: #f06060
+		color: white
+		border: none
+		transition: all 0.5s ease-in-out
+		font-weight: 600
+		transform: scale(1)
+		cursor: pointer
+		&:focus 
+			outline: none
+		&:hover
+			transform: scale(1.05)
+			box-shadow: 0 0 25px 0.5px $color_tem 
+	&:after
+		content: ''
+		background-color: #ffffff
+		border-radius: (10em/16)
+		position: absolute
+		border: solid 1px #e7e7e7
+		top: -9px
+		left: 0
+		width: 100%
+		height: 100%
+		transform: scale(0.96)
+		z-index: -1
+	&:before
+		content: ''
+		background-color: #ffffff
+		border-radius: (10em/16)
+		border: solid 1px #e7e7e7
+		position: absolute
+		top: -18px
+		left: 0
+		width: 100%
+		height: 100%
+		transform: scale(0.93)
+		z-index: -1

@@ -1,0 +1,51 @@
+footer.footer
+	.container
+		.footer_content
+			div(class="footer__shopmint shopmint")
+				.shopmint__title
+					div
+						p.h2 S
+					span.h2 Shopmint
+				.shopmint__contact
+					p.
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt quo corporis, cum nesciunt, corrupti reiciendis alias?
+					.shopmint__c_phone
+						div
+							span +(49)
+								strong 123 456 789
+						div
+							span +(49)
+								strong 789 654 321
+					.shopmint__c_email
+						div
+							span awesome@
+								strong email.com
+						div
+							span sales@
+								strong email.com
+					.shopmint__c_time
+						div
+							span monday-friday: 
+								strong 08:00-18:00
+						div
+							span saturday-sunday:
+								strong Closed
+					.shopmint__social
+						+sotceti(sotceti)
+
+
+			.footer__right
+				.footer__best_seller
+					.footer__b_title
+						span.h2 Best seller
+							strong .
+					.footer__b_description
+						.best_sell__wrap
+							+best_sell(best_sell)
+			.footer__left
+				.footer__Just_added
+					.footer__J_title
+						span.h2 Just added
+							strong .
+					.footer__J_description
+							+best_sell(best_sell)
